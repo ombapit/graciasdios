@@ -1,0 +1,1 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');class Penjualan_model extends CI_Model{	function list_detail(){			}}

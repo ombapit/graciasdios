@@ -1,0 +1,16 @@
+#RewriteEngine on
+#RewriteRule ^$ /smarty/index.php [L]
+#RewriteCond $1 !^(index\.php|templates|robots\.txt|favicon\.ico)
+#RewriteRule ^(.*)$ /smarty/index.php/$1 [L]
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+	#AllowOverride All
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	#RewriteCond $1 !^(index\.php|images|robots\.txt)
+	RewriteRule ^(.*)$ index.php/$1 [L]
+
+</IfModule>
